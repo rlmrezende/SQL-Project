@@ -1,7 +1,7 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-(fill in your description and goals here)
+Import CSV ecommerce spreadsheets into PostgresSQL for data analysis.
 
 ## Process
 ### (your step 1)
