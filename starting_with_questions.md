@@ -8,8 +8,8 @@ SQL Queries:
 ```SQL
 --  Country
 
-SELECT country, 
-    SUM(totaltransactionrevenue) AS total_revenue
+SELECT 	country, 
+    	SUM(totaltransactionrevenue) AS total_revenue
 FROM all_sessions
 WHERE totaltransactionrevenue IS NOT Null
 GROUP BY country
@@ -19,8 +19,8 @@ LIMIT 5;
 ```SQL
 --  City
 
-SELECT city, 
-    SUM(totaltransactionrevenue) AS total_revenue
+SELECT 	city, 
+    	SUM(totaltransactionrevenue) AS total_revenue
 FROM all_sessions
 WHERE city <> 'not available in demo dataset'
 GROUP BY city
@@ -46,8 +46,7 @@ SQL Queries:
 ````SQL
 -- City
 
-SELECT 
-	city,
+SELECT 	city,
 	CAST(AVG(p.orderedquantity) AS DECIMAL(10,0)) AS avg_products_ordered
 FROM all_sessions as alls
 JOIN products as p ON alls.productsku = p.sku
@@ -59,8 +58,7 @@ LIMIT 5;
 ````SQL
 -- Country
 
-SELECT 
-	country,
+SELECT 	country,
 	CAST(AVG(p.orderedquantity) AS DECIMAL(10,0)) AS avg_products_ordered
 FROM all_sessions as alls
 JOIN products as p ON alls.productsku = p.sku
@@ -71,7 +69,10 @@ LIMIT 5;
 
 Answer:
 
+![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/f67fa9bc-6658-46af-baf5-9a3a78d24584)
 
+
+![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/0b8c76a9-12e3-4965-974f-d1f79f6368fe)
 
 
 
