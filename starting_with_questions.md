@@ -5,7 +5,7 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 SQL Queries: 
-```
+```SQL
 --  Country
 
 SELECT country, SUM(totaltransactionrevenue) AS total_revenue
@@ -15,7 +15,7 @@ GROUP BY country
 ORDER BY total_revenue DESC
 LIMIT 5;
 ```
-```
+```SQL
 --  City
 
 SELECT city, SUM(totaltransactionrevenue) AS total_revenue
