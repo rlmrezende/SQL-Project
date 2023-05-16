@@ -27,8 +27,8 @@ Despite these efforts, achieving good data quality required extensive manual wor
 
 
 ## Future Goals
-### 1. Set correct values for all NULL data to improve data understanding and analysis.
-### 2. Continue data comparison to identify and adjust or simplify the tables for more efficient analysis.
-### 3. Remove more unnecessary data to further clean the data.
-### 4. Seek better data quality by bringing robustness to the analysis using advanced statistical techniques.
-### 5. Ensure the integrity and consistency of the data so that it is reliable.
+# 1. Set correct values for all NULL data to improve data understanding and analysis.
+# 2. Continue data comparison to identify and adjust or simplify the tables for more efficient analysis.
+# 3. Remove more unnecessary data to further clean the data.
+# 4. Seek better data quality by bringing robustness to the analysis using advanced statistical techniques.
+# 5. Ensure the integrity and consistency of the data so that it is reliable.
