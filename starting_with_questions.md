@@ -31,7 +31,10 @@ LIMIT 5;
 
 Answer:
 
+![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/839a384f-6538-431e-b66d-c95e8c4e971d)
 
+
+![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/4deb225a-0ee5-4b07-bd5b-2fa2b344c413)
 
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
