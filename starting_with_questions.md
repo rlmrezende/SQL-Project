@@ -8,7 +8,8 @@ SQL Queries:
 ```SQL
 --  Country
 
-SELECT country, SUM(totaltransactionrevenue) AS total_revenue
+SELECT country, 
+    SUM(totaltransactionrevenue) AS total_revenue
 FROM all_sessions
 WHERE totaltransactionrevenue IS NOT Null
 GROUP BY country
@@ -18,7 +19,8 @@ LIMIT 5;
 ```SQL
 --  City
 
-SELECT city, SUM(totaltransactionrevenue) AS total_revenue
+SELECT city, 
+    SUM(totaltransactionrevenue) AS total_revenue
 FROM all_sessions
 WHERE city <> 'not available in demo dataset'
 GROUP BY city
@@ -41,8 +43,31 @@ Answer:
 
 
 SQL Queries:
+````SQL
+-- City
 
+SELECT 
+	city,
+	CAST(AVG(p.orderedquantity) AS DECIMAL(10,0)) AS avg_products_ordered
+FROM all_sessions as alls
+JOIN products as p ON alls.productsku = p.sku
+WHERE city IS NOT NULL
+GROUP BY city
+ORDER BY avg_products_ordered DESC
+LIMIT 5;
+````
+````SQL
+-- Country
 
+SELECT 
+	country,
+	CAST(AVG(p.orderedquantity) AS DECIMAL(10,0)) AS avg_products_ordered
+FROM all_sessions as alls
+JOIN products as p ON alls.productsku = p.sku
+GROUP BY country
+ORDER BY avg_products_ordered DESC
+LIMIT 5;
+````
 
 Answer:
 
