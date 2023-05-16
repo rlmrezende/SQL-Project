@@ -91,7 +91,7 @@ JOIN
 		ON alls.productsku = p.sku
 GROUP BY country, v2productcategory
 ORDER BY avg_products_ordered DESC
-LIMIT 5;
+LIMIT 8;
 ````
 ````SQL
 -- City
@@ -105,14 +105,14 @@ JOIN
 		ON alls.productsku = p.sku
 GROUP BY city, v2productcategory
 ORDER BY avg_products_ordered DESC
-LIMIT 5;
+LIMIT 8;
 ````
 
 Answer:
 
-![Country](https://github.com/rlmrezende/SQL-Project/assets/128871261/0705fcb9-f4b3-4f80-8367-0d395a7847b4)
+![Country](https://github.com/rlmrezende/SQL-Project/assets/128871261/5c61105b-fc42-433c-8060-fae371dfeed7)
 
-![City](https://github.com/rlmrezende/SQL-Project/assets/128871261/a9c95e03-84a6-4e8a-913c-44616ee651a2)
+![City](https://github.com/rlmrezende/SQL-Project/assets/128871261/9260625d-897a-43de-8222-0651c45abece)
 
 
 
