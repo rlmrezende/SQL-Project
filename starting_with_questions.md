@@ -82,37 +82,60 @@ SQL Queries:
 ````SQL
 -- Country
 
-SELECT 	country AS Name,
-   	v2productcategory AS product_category,
-    	CAST(AVG(p.orderedquantity) AS DECIMAL(10,0)) AS avg_products_ordered
+SELECT 	country,
+	v2productcategory AS product_category,
+    	SUM(orderedquantity) AS total_ordered_quantity
 FROM all_sessions AS alls
-JOIN 
-    products AS p 
-		ON alls.productsku = p.sku
+JOIN products AS p ON alls.productsku = p.sku
 GROUP BY country, v2productcategory
-ORDER BY avg_products_ordered DESC
-LIMIT 8;
+HAVING SUM(orderedquantity) = 
+	(
+    SELECT MAX(sum_ordered_quantity)
+    FROM (
+        SELECT	country,
+            	v2productcategory,
+            	SUM(orderedquantity) AS sum_ordered_quantity
+        FROM all_sessions AS alls2
+        JOIN products AS p2 ON alls2.productsku = p2.sku
+        GROUP BY country, v2productcategory
+    	) AS total_ordered_quantity_by_category
+    WHERE total_ordered_quantity_by_category.country = alls.country
+)
+ORDER BY total_ordered_quantity DESC
+LIMIT 5;
 ````
 ````SQL
 -- City
 
-SELECT 	city AS Name,
-   	v2productcategory AS product_category,
-    	CAST(AVG(p.orderedquantity) AS DECIMAL(10,0)) AS avg_products_ordered
+SELECT 	city,
+	v2productcategory AS product_category,
+    	SUM(orderedquantity) AS total_ordered_quantity
 FROM all_sessions AS alls
-JOIN 
-    products AS p 
-		ON alls.productsku = p.sku
+JOIN products AS p ON alls.productsku = p.sku
+WHERE city <> '(not set)'
 GROUP BY city, v2productcategory
-ORDER BY avg_products_ordered DESC
-LIMIT 8;
+HAVING SUM(orderedquantity) = 
+	(
+    SELECT MAX(sum_ordered_quantity)
+    FROM (
+        SELECT	city,
+            	v2productcategory,
+            	SUM(orderedquantity) AS sum_ordered_quantity
+        FROM all_sessions AS alls2
+        JOIN products AS p2 ON alls2.productsku = p2.sku
+        GROUP BY city, v2productcategory
+    	) AS total_ordered_quantity_by_category
+    WHERE city <> 'not available in demo dataset' AND total_ordered_quantity_by_category.city = alls.city
+)
+ORDER BY total_ordered_quantity DESC
+LIMIT 5;
 ````
 
 Answer:
 
-![Country](https://github.com/rlmrezende/SQL-Project/assets/128871261/5c61105b-fc42-433c-8060-fae371dfeed7)
+![Country](https://github.com/rlmrezende/SQL-Project/assets/128871261/f7b86032-bbb3-40a6-82c9-40568a959bcf)
 
-![City](https://github.com/rlmrezende/SQL-Project/assets/128871261/9260625d-897a-43de-8222-0651c45abece)
+![City](https://github.com/rlmrezende/SQL-Project/assets/128871261/82d5ed29-05a3-4a6c-92b7-3ae6c8539612)
 
 
 
