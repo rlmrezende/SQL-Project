@@ -32,11 +32,11 @@ LIMIT 5;
 
 
 Answer:
---  Country
-![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/839a384f-6538-431e-b66d-c95e8c4e971d)
 
---  City
-![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/4deb225a-0ee5-4b07-bd5b-2fa2b344c413)
+![Country](https://github.com/rlmrezende/SQL-Project/assets/128871261/839a384f-6538-431e-b66d-c95e8c4e971d)
+
+
+![City](https://github.com/rlmrezende/SQL-Project/assets/128871261/4deb225a-0ee5-4b07-bd5b-2fa2b344c413)
 
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
@@ -68,11 +68,10 @@ LIMIT 5;
 ````
 
 Answer:
---  City
-![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/f67fa9bc-6658-46af-baf5-9a3a78d24584)
 
--- Country
-![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/0b8c76a9-12e3-4965-974f-d1f79f6368fe)
+![City](https://github.com/rlmrezende/SQL-Project/assets/128871261/f67fa9bc-6658-46af-baf5-9a3a78d24584)
+
+![Country](https://github.com/rlmrezende/SQL-Project/assets/128871261/0b8c76a9-12e3-4965-974f-d1f79f6368fe)
 
 
 
@@ -110,11 +109,10 @@ LIMIT 5;
 ````
 
 Answer:
--- Country
-![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/0705fcb9-f4b3-4f80-8367-0d395a7847b4)
 
--- City
-![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/a9c95e03-84a6-4e8a-913c-44616ee651a2)
+![Country](https://github.com/rlmrezende/SQL-Project/assets/128871261/0705fcb9-f4b3-4f80-8367-0d395a7847b4)
+
+![City](https://github.com/rlmrezende/SQL-Project/assets/128871261/a9c95e03-84a6-4e8a-913c-44616ee651a2)
 
 
 
