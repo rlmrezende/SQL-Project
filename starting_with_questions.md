@@ -80,11 +80,40 @@ Answer:
 
 
 SQL Queries:
+````SQL
+-- Country
 
+SELECT 	country AS Name,
+   		v2productcategory AS product_category,
+    	CAST(AVG(p.orderedquantity) AS DECIMAL(10,0)) AS avg_products_ordered
+FROM all_sessions AS als
+JOIN 
+    products AS p 
+		ON als.productsku = p.sku
+GROUP BY country, v2productCategory
+ORDER BY avg_products_ordered DESC
+LIMIT 5;
+````
+````SQL
+-- City
 
+SELECT 	city AS Name,
+   		v2productcategory AS product_category,
+    	CAST(AVG(p.orderedquantity) AS DECIMAL(10,0)) AS avg_products_ordered
+FROM all_sessions AS als
+JOIN 
+    products AS p 
+		ON als.productsku = p.sku
+GROUP BY city, v2productCategory
+ORDER BY avg_products_ordered DESC
+LIMIT 5;
+````
 
 Answer:
 
+![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/0705fcb9-f4b3-4f80-8367-0d395a7847b4)
+
+![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/a9c95e03-84a6-4e8a-913c-44616ee651a2)
 
 
 
