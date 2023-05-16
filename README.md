@@ -4,11 +4,11 @@
 Import CSV ecommerce spreadsheets into PostgreSQL for data analysis.
 
 ## Process
-### 1. Identify the data types for each column in the spreadsheets.
-### 2. Manually create tables in PostgreSQL with respective columns for all five spreadsheets.
-### 3. Use the COPY query to import the data from the CSV files into the corresponding tables.
-### 4. Checking for null values in the imported data and handling them appropriately.
-### 5. Validate the imported data to ensure data integrity and consistency.
+#### 1. Identify the data types for each column in the spreadsheets.
+#### 2. Manually create tables in PostgreSQL with respective columns for all five spreadsheets.
+#### 3. Use the COPY query to import the data from the CSV files into the corresponding tables.
+#### 4. Checking for null values in the imported data and handling them appropriately.
+#### 5. Validate the imported data to ensure data integrity and consistency.
 
 
 ## Results
