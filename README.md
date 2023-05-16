@@ -19,11 +19,11 @@ During the data cleaning process, duplicate and null values were identified and 
 Despite these efforts, achieving good data quality required extensive manual work to clean the raw data, including data comparisons and corrections to ensure consistency.
 
 ## Challenges 
-### 1. Checking the correct data types for each column in the spreadsheets.
-### 2. Checking for duplicates and null values in the imported data and handling them appropriately to ensure data quality.
-### 3. Identifying unnecessary columns and removing them to clean the data for efficient analysis.
-### 4. Ensuring data integrity and consistency after making changes to the data.
-### 5. Finding relationships between tables and assigning primary keys and foreign keys to create an ERD.
+#### 1. Checking the correct data types for each column in the spreadsheets.
+#### 2. Checking for duplicates and null values in the imported data and handling them appropriately to ensure data quality.
+#### 3. Identifying unnecessary columns and removing them to clean the data for efficient analysis.
+#### 4. Ensuring data integrity and consistency after making changes to the data.
+#### 5. Finding relationships between tables and assigning primary keys and foreign keys to create an ERD.
 
 
 ## Future Goals
