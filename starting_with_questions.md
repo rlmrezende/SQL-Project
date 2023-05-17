@@ -209,12 +209,36 @@ Answer:
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
+````SQL
+-- City
 
+SELECT 
+    city, 
+    SUM(totaltransactionrevenue) AS revenue
+FROM all_sessions
+WHERE totaltransactionrevenue IS NOT NULL
+	AND city <> 'not available in demo dataset'
+GROUP BY city
+ORDER BY revenue DESC
+LIMIT 5;
+````
+````SQL
+-- Country
 
+SELECT 
+    country, 
+    SUM(totaltransactionrevenue) AS revenue
+FROM all_sessions
+WHERE totaltransactionrevenue IS NOT NULL
+GROUP BY country
+ORDER BY revenue DESC;
+````
 
 Answer:
 
+![City](https://github.com/rlmrezende/SQL-Project/assets/128871261/3ec32a61-7f9b-4997-9032-4862093eefd5)
 
+![Country](https://github.com/rlmrezende/SQL-Project/assets/128871261/6a8b51c6-b95a-42da-998b-a2b409b6eb2c)
 
 
 
