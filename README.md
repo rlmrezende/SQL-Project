@@ -1,7 +1,7 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-Import CSV ecommerce spreadsheets into PostgreSQL for data analysis.
+Importing ecommerce CSV spreadsheets into PostgreSQL for data analysis, and performing data treatment and cleaning to ensure data integrity.
 
 ## Process
 1. Identify the data types for each column in the spreadsheets.
