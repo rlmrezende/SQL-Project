@@ -1,7 +1,7 @@
 What are your risk areas? Identify and describe them.
 1. Checking the values between sales_report and sales_by_sku to gain a better understanding of their relationship.
 
-
+#
 QA Process:
 Describe your QA process and include the SQL queries used to execute it.
 
