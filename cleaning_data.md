@@ -1,12 +1,17 @@
 What issues will you address by cleaning the data?
 
+1. Removing empty columns using the DROP function.
+2. Removing duplicate columns using the DROP function.
+3. Changing the data type for better understanding.
+4. The unit cost in the data needs to be divided by 1,000,000.
+
 Queries:
 Below, provide the SQL queries you used to clean your data.
 
 
 
 
-- Removing empty columns using the DROP function:
+1. Removing empty columns using the DROP function:
 ````SQL
 ALTER TABLE all_sessions 
   DROP COLUMN itemquantity,
@@ -18,7 +23,7 @@ ALTER TABLE analytics
   DROP COLUMN userid;
 ````
 
-- Removing duplicate columns using the DROP function:
+2. Removing duplicate columns using the DROP function:
 ````SQL
 ALTER TABLE sales_report 
   DROP COLUMN name, 
@@ -28,7 +33,7 @@ ALTER TABLE sales_report
   DROP COLUMN sentimentmagnitude;
 ````
 
-- Changing TYPE
+3. Changing the data type for better understanding:
 ````SQL
 -- analytics
 
@@ -55,7 +60,7 @@ ALTER TABLE all_sessions
   USING (productrevenue::decimal);
 ````
 
-- Cleaning hint: The unit cost in the data needs to be divided by 1,000,000.
+4. The unit cost in the data needs to be divided by 1,000,000:
 ````SQL
   -- analytics 
   
