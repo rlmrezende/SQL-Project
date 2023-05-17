@@ -144,11 +144,64 @@ Answer:
 
 
 SQL Queries:
+````SQL
+-- Country
 
+SELECT 
+    country,
+    v2productname AS product_name,
+    SUM(orderedquantity) AS total_ordered_quantity
+FROM all_sessions AS alls
+JOIN products AS p ON alls.productsku = p.sku
+GROUP BY country, v2productname
+HAVING SUM(orderedquantity) = (
+    SELECT MAX(sum_ordered_quantity)
+    FROM (
+        SELECT 
+            country,
+            v2productname,
+            SUM(orderedquantity) AS sum_ordered_quantity
+        FROM all_sessions AS alls2
+        JOIN products AS p2 ON alls2.productsku = p2.sku
+        GROUP BY country, v2productname
+    ) AS total_ordered_quantity_by_category
+    WHERE total_ordered_quantity_by_category.country = alls.country
+)
+ORDER BY total_ordered_quantity DESC
+LIMIT 5;
+````
+````SQL
+-- City
 
+SELECT 	city,
+	v2productname AS product_name,
+    	SUM(orderedquantity) AS total_ordered_quantity
+FROM all_sessions AS alls
+JOIN products AS p ON alls.productsku = p.sku
+WHERE city <> '(not set)'
+GROUP BY city, v2productname
+HAVING SUM(orderedquantity) = 
+	(
+    SELECT MAX(sum_ordered_quantity)
+    FROM (
+        SELECT	city,
+            	v2productname,
+            	SUM(orderedquantity) AS sum_ordered_quantity
+        FROM all_sessions AS alls2
+        JOIN products AS p2 ON alls2.productsku = p2.sku
+        GROUP BY city, v2productname
+    	) AS total_ordered_quantity_by_category
+    WHERE city <> 'not available in demo dataset' AND total_ordered_quantity_by_category.city = alls.city
+)
+ORDER BY total_ordered_quantity DESC
+LIMIT 10;
+````
 
 Answer:
 
+![Country](https://github.com/rlmrezende/SQL-Project/assets/128871261/5a24f0de-9769-4221-bf91-e497e49b6e9f)
+
+![City](https://github.com/rlmrezende/SQL-Project/assets/128871261/ea3876d8-5dbd-462d-801f-eebc798ca224)
 
 
 
