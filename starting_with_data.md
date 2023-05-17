@@ -27,7 +27,7 @@ ORDER BY visitors DESC;
 ````
 Answer: Returns a list of 30 products that have only been visited by one unique user, which can be analyzed to determine why there is such low visitation for these products.
 
-![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/342ec773-071f-4268-a6bd-61485e89c961)
+![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/33d08376-a8be-437b-97dd-e959d765c2fa)
 
 
 
