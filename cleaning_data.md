@@ -4,6 +4,8 @@ What issues will you address by cleaning the data?
 2. Removing duplicate columns using the DROP function.
 3. Changing the data type for better understanding.
 4. The unit cost in the data needs to be divided by 1,000,000.
+5. Checking the date relationship between all_sessions and analytics to try to determine if one can be dropped 
+#
 
 Queries:
 Below, provide the SQL queries you used to clean your data.
@@ -78,3 +80,15 @@ UPDATE all_sessions
 UPDATE all_sessions 
   SET totaltransactionrevenue = (totaltransactionrevenue/1000000);
 ````
+
+5. Checking the date relationship between all_sessions and analytics to try to determine if one can be dropped:
+````SQL
+SELECT 
+    COUNT(alls.date) AS date_all_sessions,
+    COUNT(a.date) AS date_analytics
+FROM all_sessions alls
+FULL OUTER JOIN analytics a ON alls.date = a.date;
+````
+![image](https://github.com/rlmrezende/SQL-Project/assets/128871261/eb2c795b-499b-4d4c-a07a-85726642a941)
+
+
